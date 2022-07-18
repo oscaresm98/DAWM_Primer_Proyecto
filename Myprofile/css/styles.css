@@ -254,6 +254,10 @@ h1, h2, h3 {
     }
     
 }
+/*Sobre mi*/
+.contacto p {
+    margin-bottom: 2rem;
+}
 /*Footer*/
 .footer {
     display: flex;
