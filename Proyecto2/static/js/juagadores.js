@@ -13,8 +13,12 @@ let cargarJugadores = async (event) => {
     const selectElement = document.querySelector('select');
     
     selectElement.addEventListener('change', async (event) => {
-        let link = `https://damp-beach-17296.herokuapp.com/https://www.balldontlie.io/api/v1/season_averages?season=2018&player_ids[]=${event.target.value}` 
+        let id=parseInt(event.target.value, 10)
+        document.getElementById("grafico").innerHTML=`<canvas id="chartjs-dashboard-bar"></canvas>`
+        
+        let link = `https://damp-beach-17296.herokuapp.com/https://www.balldontlie.io/api/v1/season_averages?season=2018&player_ids[]=${id}` 
         let respuesta2= await fetch(link)
+
         let datoE= await respuesta2.json();
         let estadisdicas= datoE["data"][0];
         const resultdosE = [];
@@ -22,13 +26,19 @@ let cargarJugadores = async (event) => {
 
         let i=1;
         for (const key in estadisdicas){
-            if(i>=4 && i<=16){
-                resultdosE.push(estadisdicas.key)
+            if(i>=5 && i<=17){
+                //let p3=estadisdicas[`${key}`]
+                resultdosE.push(estadisdicas[key])
             }
             i++;          
             
         }
-        nuevoChart(resultdosE)
+        if(resultdosE.length!=0){
+            nuevoChart(resultdosE)
+        }else {
+            document.getElementById("grafico").innerHTML = `<h3> Este jugador no tiene estadisticas que mostrar</h3>`
+        }
+        
     });
 
 

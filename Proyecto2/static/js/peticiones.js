@@ -150,7 +150,7 @@ let cargarCiudades = async (event) => {
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    // cargarTarjetas();
+    cargarTarjetas();
     cargarPuntosVisitantes();
     cargarCiudades();
 });

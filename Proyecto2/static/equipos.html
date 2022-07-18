@@ -88,7 +88,30 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h1>Hola que hace</h1>
+
+					<div class="form-group mb-3">
+						<div class="input-group">
+							<select name="select" class="form-control " required="">
+							  <option value="-1" selected="">Seleccione el nombre de un equipo</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Grafico -->
+					<div class="col-12 col-lg-6 w-auto">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="card-title">Estadisticas</h5>
+								<h6 class="card-subtitle text-muted">Numero de juegos ganados, empatados y perdidos</h6>
+							</div>
+							<div class="card-body">
+								<div id="grafico" class="chart chart-sm">
+									<canvas id="chartjs-pie"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Fin Grafico -->
 					
 
 				</div>
@@ -129,6 +152,8 @@
 	</div>
 
 	<script src="js/app.js"></script>
+	<script src="js/equipos.js"></script>
+
 
 </body>
 
