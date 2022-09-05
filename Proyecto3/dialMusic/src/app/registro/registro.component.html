@@ -1,0 +1,38 @@
+<div class="contenedor">
+    <div class="row v-align justify-content-center">
+        <div class="col-12">
+            <h1 class="text-center fw-bold colorP">Registrese para acceder a la aplicaci&oacute;n</h1>
+        </div>
+        
+        <mat-card-content>
+            <form [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
+                <mat-form-field class="full-width ancho mt-1">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput formControlName="usuario" placeholder="Ingrese nombre de usuario" name="fname">
+                    <mat-error *ngIf="usuarioForm.get('usuario')?.hasError('required') && usuarioForm.get('usuario')?.touched">El usuario <strong>es obligatorio</strong></mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width ancho mt-1">
+                    <mat-label>Alias</mat-label>
+                    <input matInput formControlName="alias" placeholder="Ingrese un alias" name="alias">
+                    <mat-error *ngIf="usuarioForm.get('alias')?.hasError('required') && usuarioForm.get('alias')?.touched">El alias <strong>es obligatorio</strong></mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width ancho mt-1">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput formControlName="contrasenia" placeholder="Ingrese su contraseña" name="password">
+                    <mat-error *ngIf="usuarioForm.get('contrasenia')?.hasError('required') && usuarioForm.get('contrasenia')?.touched">La contrase&ntilde;a <strong>es obligatorio</strong></mat-error>
+                    <!-- <mat-hint class="text-danger" *ngIf="usuarioForm.get('usuario')?.hasError('required') && usuarioForm.get('usuario')?.touched">Este campo es obligatorio</mat-hint> -->
+                </mat-form-field>
+                <button mat-raised-button type="submit" [disabled]="usuarioForm.invalid" class="bgColor rounded-pill w-100 mt-3" color="primary" >CREAR CUENTA</button>
+                <button mat-button routerLink="/login" class="rounded-pill w-100 mt-3 border border-dark">REGRESAR</button>
+            </form>        
+        </mat-card-content>
+        
+    </div>
+    
+</div>
+
+<!-- <strong>{{usuarioForm.value.usuario}} </strong>
+<br>
+<strong>{{usuarioForm.value.alias}} </strong>
+<br>
+<strong>{{usuarioForm.value.contrasenia}} </strong> -->

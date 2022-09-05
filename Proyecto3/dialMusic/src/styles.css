@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.contenedor {
+    padding: 32px;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+.ancho {
+min-width: 150px;
+max-width: 500px;
+width: 100%;
+}
+.v-align {
+	padding: 30vh 0;
+}
+.colorP {
+    color: #0f0c29;
+}
+.colorS {
+color: #F93131;
+}
+.colorBlanco {
+    color: white;
+}
+.pantallaCompleta{
+    min-height: 100vh;
+}
+.titulo {
+    font-size: 10rem;
+}
+.bg-red {
+    background-color: #F93131;
+
+}
+

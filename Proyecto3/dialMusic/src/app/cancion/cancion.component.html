@@ -1,0 +1,27 @@
+<div class="container mt-3">
+    <div class="card rounded-4 w-100 bg-red">
+        <div class="card-body">
+            <h2 class="titulo ps-2 fs-2 mb-0">Canciones</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid h-75 d-flex">
+    <div class="row">
+        <div class="col-6" *ngFor="let cancion of dataSource">
+            <!-- *ngFor -->
+            <mat-card class="rounded-4 bg-transparent mt-5">
+                <img mat-card-image class=" w-75 h-75x-1 mx-auto rounded-circle" src="{{cancion.img}}" alt="{{cancion.img}}">
+
+                <mat-card-header>
+                    <mat-card-title class="text-white text-center">
+                        <a [routerLink]="['/filtro', cancion.album_id]" title="" class="text-white text-decoration-none">{{cancion.nombre}}</a>
+                        
+                    </mat-card-title>
+                    
+                </mat-card-header>
+              </mat-card>
+        </div>
+
+    </div>
+</div>

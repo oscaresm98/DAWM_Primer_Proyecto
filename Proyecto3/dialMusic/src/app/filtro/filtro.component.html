@@ -1,0 +1,17 @@
+<mat-card class="example-card bg-transparent">
+    <mat-card-header>
+      <mat-card-title class="text-white">{{item.album_id}} {{item.nombre}}</mat-card-title>
+      <mat-card-subtitle class="text-white">{{item.num_canciones}} canciones</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{item.img}}" alt="Photo of a Albu,">
+    <mat-card-content>
+      <p class="text-white">
+        Dolor sit amet consectetur adipisicing elit. Fugiat earum odio voluptatibus blanditiis atque quasi, sit vero a pariatur accusantium eaque corporis, et accusamus rerum iste dolore quos culpa natus. Sit amet consectetur adipisicing elit. Quo, veniam corrupti inventore omnis error ipsum consequuntur voluptates ex distinctio facere eum dolore.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="text-white" routerLink="/cancion">BACK</button>
+      <button mat-button class="text-white">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  
